@@ -1,0 +1,16 @@
+// --------------------------------------------------
+.clearfix
+	zoom: 1
+	&:before, &:after
+		content: "\0020"
+		display: block
+		height: 0
+		overflow: hidden
+	
+	&:after
+		clear: both
+
+@mixin font-style($color: $branco, $tamanho: 14px, $largura: 100)
+	color: $color
+	+adjust-font-size-to($tamanho)
+	font-weight: $largura
